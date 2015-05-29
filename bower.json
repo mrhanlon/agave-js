@@ -1,0 +1,28 @@
+{
+  "name": "agave.js",
+  "main": "dist/agave.js",
+  "version": "1.0.0",
+  "authors": [
+    "Matthew R Hanlon <mrhanlon@tacc.utexas.edu>"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "agave",
+    "api"
+  ],
+  "license": "MIT",
+  "homepage": "http://agaveapi.co",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "spec"
+  ],
+  "dependencies": {
+    "custom-event": "^1.0.0",
+    "es6-promise": "^2.1.1",
+    "swagger-client": "git://github.com/swagger-api/swagger-js.git#8eddfccb55615763908b2685d37b2c26f79fa744"
+  }
+}
