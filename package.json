@@ -1,5 +1,5 @@
 {
-  "name": "agave.js",
+  "name": "agave-js",
   "version": "1.0.0",
   "description": "Agave API JavaScript Client Library",
   "main": "dist/agave.js",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/taccaci/agave.js"
+    "url": "https://bitbucket.org/taccaci/agave-js"
   },
   "keywords": [
     "Agave",
