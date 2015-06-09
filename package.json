@@ -21,7 +21,7 @@
   "dependencies": {
     "custom-event": "^1.0.0",
     "es6-promise": "^2.1.1",
-    "swagger-client": "git://github.com/swagger-api/swagger-js.git#8eddfccb55615763908b2685d37b2c26f79fa744"
+    "swagger-client": "^2.1.1"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
