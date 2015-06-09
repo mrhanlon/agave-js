@@ -41,9 +41,21 @@ module.exports = function(grunt) {
           ]
         }
       }
+    },
+
+    copy: {
+      example: {
+        files: [
+          {
+            src: 'src/example/index.html',
+            dest: 'dist/example/index.html'
+          }
+        ]
+      }
     }
   });
 
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-karma');
@@ -52,6 +64,6 @@ module.exports = function(grunt) {
 
   grunt.registerTask('dev', ['jshint','karma:dev']);
 
-  grunt.registerTask('default', ['test','uglify']);
+  grunt.registerTask('default', ['test','uglify','copy']);
 
 };
