@@ -1,10 +1,10 @@
-var Agave = require('../src/agave');
+var Agave = require('../../src/agave');
 var SwaggerClient = require('swagger-client');
 
 describe('Sanity Checks', function() {
   'use strict';
 
-  var apiSpec = require('./swagger-spec/spec.json');
+  var apiSpec = require('./../swagger-spec/spec.json');
 
   var client;
 

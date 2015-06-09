@@ -11,18 +11,15 @@ module.exports = function(grunt) {
       all: ['Gruntfile.js', 'src/**/*.js', 'spec/**/*.js']
     },
 
-    // jasmine: {
-    //   nodeTests: {
-    //     src: 'src/*.js',
-    //     options: {
-    //       specs: 'spec/*.js',
-    //       vendor: [
-    //         './node_modules/swagger-client/browser/swagger-client.js',
-    //         './node_modules/es6-promise/dist/es6-promise.js'
-    //       ]
-    //     }
-    //   }
-    // },
+    karma: {
+      unit: {
+        configFile: 'karma.conf.js'
+      },
+      dev: {
+        configFile: 'karma.conf.js',
+        singleRun: false
+      }
+    },
 
     uglify: {
       dist: {
@@ -48,8 +45,13 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
-  // grunt.loadNpmTasks('grunt-contrib-jasmine');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-karma');
 
-  grunt.registerTask('default', ['jshint','uglify']);
+  grunt.registerTask('test', ['jshint','karma:unit']);
+
+  grunt.registerTask('dev', ['jshint','karma:dev']);
+
+  grunt.registerTask('default', ['test','uglify']);
+
 };

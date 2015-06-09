@@ -5,7 +5,8 @@
   "main": "dist/agave.js",
   "homepage": "http://preview.agaveapi.co",
   "scripts": {
-    "test": "./node_modules/.bin/jasmine"
+    "test": "./node_modules/.bin/jasmine",
+    "browser-test": "./node_modules/.bin/karma start"
   },
   "repository": {
     "type": "git",
@@ -26,9 +27,12 @@
     "grunt": "^0.4.5",
     "grunt-contrib-jshint": "^0.11.2",
     "grunt-contrib-uglify": "^0.9.1",
-    "http-server": "^0.8.0",
+    "grunt-karma": "^0.11.0",
     "jasmine": "^2.3.1",
     "jasmine-core": "^2.3.4",
-    "selenium-webdriver": "^2.45.1"
+    "karma": "^0.12.36",
+    "karma-chrome-launcher": "^0.1.12",
+    "karma-firefox-launcher": "^0.1.6",
+    "karma-jasmine": "^0.3.5"
   }
 }
