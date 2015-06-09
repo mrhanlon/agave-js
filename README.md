@@ -12,6 +12,8 @@ var agave = new Agave({
   url: 'https://agave.iplantc.org/docs/v2/resources/',
   authorization: 'Bearer __token__'
 });
-
+agave.api.files.listOnDefaultSystem({filePath: 'testuser'}, function(response) {
+  console.log(response.obj.result);
+});
 </script>
 ```
