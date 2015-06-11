@@ -38,15 +38,14 @@
         root.Agave = Agave;
     }
     Agave.prototype.ready = function() {
-        if (!this.options.authorization) {
-            return Promise.reject('Required option "authorization" is missing');
-        }
         var self = this;
         if (!self._ready) {
             self._ready = new Promise(function(resolve, reject) {
-                self.api = new SwaggerClient({
+                self.api = new SwaggerClient();
+                self.api.initialize({
                     url: self.options.url,
                     spec: self.options.spec,
+                    authorizations: self.options.authorizations,
                     success: function() {
                         if (self.api.ready === true) {
                             resolve(self);
@@ -54,7 +53,6 @@
                     },
                     failure: reject
                 });
-                self.api.clientAuthorizations.add("Authorization", new SwaggerClient.ApiKeyAuthorization("Authorization", self.options.authorization, "header"));
             });
         }
         return self._ready;
