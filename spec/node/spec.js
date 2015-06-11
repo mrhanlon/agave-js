@@ -22,35 +22,41 @@ describe('Sanity Checks', function() {
     expect(client.options.url).toBe('https://api.example.com');
   });
 
-  it('Agave.ready rejects if "authorization" is missing', function(done) {
+  it('Agave.ready resolves after parsing API spec', function(done) {
     client = new Agave({url: 'https://api.example.com', spec: apiSpec});
     client.ready().then(
       function() {
-        throw 'Should not have resolved!';
+        expect(client.api).toBeDefined();
+        expect(client.api instanceof SwaggerClient).toBe(true);
+        expect(client.api.apisArray.length).toBe(apiSpec.tags.length);
+        done();
       },
       function(err) {
-        console.log(err);
-        expect(true).toEqual(true);
+        fail(err);
         done();
       }
     );
   });
 
-  it('Agave.ready resolves if "authorization" is set', function(done) {
-    client = new Agave({
+  it('Agave.api SwaggerClient has passed options.authorizations set', function(done) {
+    var options = {
       url: 'https://api.example.com',
       spec: apiSpec,
-      authorization: 'Bearer asdf1234'
-    });
+      authorizations: {
+        'Authorization': new SwaggerClient.ApiKeyAuthorization('Authorization', 'Bearer asdf1234', 'header')
+      }
+    };
+    client = new Agave(options);
     client.ready().then(
       function() {
-        expect(typeof client.api).toBe('object');
-        expect(client.api instanceof SwaggerClient).toBe(true);
+        expect(client.api.clientAuthorizations.authz).toBeDefined();
+        expect(client.api.clientAuthorizations.authz.Authorization).toBeDefined();
+        expect(client.api.clientAuthorizations.authz.Authorization).toEqual(options.authorizations.Authorization);
         done();
       },
       function(err) {
-        console.log(err);
-        throw 'Should have resolved!';
+        fail(err);
+        done();
       }
     );
   });

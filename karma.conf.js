@@ -15,10 +15,17 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
+      'node_modules/karma-read-json/karma-read-json.js',
       'node_modules/es6-promise/dist/es6-promise.js',
       'node_modules/swagger-client/browser/swagger-client.js',
       'src/agave.js',
-      'spec/browser/*.js'
+      'spec/browser/*.js',
+      {
+        pattern: 'spec/swagger-spec/spec.json',
+        watched: true,
+        included: false,
+        served: true
+      }
     ],
 
 
