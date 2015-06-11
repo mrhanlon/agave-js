@@ -14,13 +14,12 @@
       </p>
     </div>
   </div>
-  <script src="../vendor/vendor.js"></script>
-  <script src="../agave.js"></script>
+  <script src="node_modules/es6-promise/dist/es6-promise.js"></script>
+  <script src="node_modules/swagger-client/browser/swagger-client.js"></script>
+  <script src="src/agave.js"></script>
   <script>
-    var agave = new Agave({
-      url: 'https://agave.iplantc.org/docs/v2/resources/',
-      authorization: 'Bearer __token__'
-    });
+    var url = window.location.origin + '/spec/swagger-spec/spec.json';
+    var agave = new Agave({url: url});
     agave.ready().then(function() {
       var help = document.createElement('pre');
       var div = document.querySelector('#api-help');
