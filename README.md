@@ -1,12 +1,10 @@
-# Agave.js
+# AgaveAPI.js
 
-[![Build Status](https://travis-ci.org/mrhanlon/agave-js.svg)](https://travis-ci.org/mrhanlon/agave-js)
+[![Build Status](https://travis-ci.org/mrhanlon/agaveapi-js.svg)](https://travis-ci.org/mrhanlon/agaveapi-js)
 
 ## Usage
 
-### Node.js
-
-**Docs coming soon!**
+AgaveAPI.js is designed to work both client-side in the browser and server-side for Node.js applications.
 
 ### Browser
 
@@ -30,6 +28,10 @@ agave.ready().then(function() {
 </script>
 ```
 
+### Node.js
+
+**Docs coming soon!**
+
 ## Development
 
 You will need node.js, npm, and grunt installed on your system.
@@ -39,8 +41,8 @@ You will need node.js, npm, and grunt installed on your system.
 Clone the repo, install the dependencies, and see how it works!
 
 ```bash
-$> git clone https://github.com/mrhanlon/agave-js.git
-$> cd agave-auth-js
+$> git clone https://github.com/mrhanlon/agaveapi-js.git
+$> cd agaveapi-js
 $> npm install
 $> grunt serve
 ```

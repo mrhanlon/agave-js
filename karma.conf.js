@@ -18,7 +18,7 @@ module.exports = function(config) {
       'node_modules/karma-read-json/karma-read-json.js',
       'node_modules/es6-promise/dist/es6-promise.js',
       'node_modules/swagger-client/browser/swagger-client.js',
-      'src/agave.js',
+      'src/*.js',
       'spec/browser/*.js',
       {
         pattern: 'spec/swagger-spec/spec.json',

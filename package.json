@@ -1,8 +1,8 @@
 {
-  "name": "agave-js",
+  "name": "agaveapi-js",
   "version": "1.0.0",
   "description": "Agave API JavaScript Client Library",
-  "main": "dist/agave.js",
+  "main": "dist/agaveapi.js",
   "homepage": "http://preview.agaveapi.co",
   "scripts": {
     "test": "./node_modules/.bin/jasmine",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mrhanlon/agave-js.git"
+    "url": "https://github.com/mrhanlon/agaveapi-js.git"
   },
   "keywords": [
     "Agave",
@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-connect": "^0.10.1",
     "grunt-contrib-jshint": "^0.11.2",
     "grunt-contrib-uglify": "^0.9.1",

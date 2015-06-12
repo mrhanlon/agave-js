@@ -1,4 +1,4 @@
-var Agave = require('../../src/agave');
+var Agave = require('../../src/agaveapi');
 var SwaggerClient = require('swagger-client');
 
 describe('Sanity Checks', function() {

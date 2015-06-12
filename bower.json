@@ -1,6 +1,6 @@
 {
-  "name": "agave.js",
-  "main": "dist/agave.js",
+  "name": "agaveapi-js",
+  "main": "dist/agaveapi.js",
   "version": "1.0.0",
   "authors": [
     "Matthew R Hanlon <mrhanlon@tacc.utexas.edu>"
@@ -9,11 +9,11 @@
     "globals"
   ],
   "keywords": [
-    "agave",
-    "api"
+    "Agave",
+    "API"
   ],
   "license": "MIT",
-  "homepage": "http://agaveapi.co",
+  "homepage": "http://preview.agaveapi.co",
   "ignore": [
     "**/.*",
     "node_modules",

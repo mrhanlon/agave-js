@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <title>Agave.js Example Usage</title>
+  <title>AgaveAPI.js Example Usage</title>
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
 </head>
@@ -10,13 +10,13 @@
     <h1>Agave.js</h1>
     <div id="api-help">
       <p>
-        <i class="fa fa-refresh fa-spin"></i> Loading Agave.js API Spec...
+        <i class="fa fa-refresh fa-spin"></i> Loading Agave API Spec...
       </p>
     </div>
   </div>
   <script src="node_modules/es6-promise/dist/es6-promise.js"></script>
   <script src="node_modules/swagger-client/browser/swagger-client.js"></script>
-  <script src="src/agave.js"></script>
+  <script src="src/agaveapi.js"></script>
   <script>
     var url = window.location.origin + '/spec/swagger-spec/spec.json';
     var agave = new Agave({url: url});

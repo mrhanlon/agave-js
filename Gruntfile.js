@@ -4,6 +4,10 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
+    clean: {
+      dist: ['dist/*']
+    },
+
     jshint: {
       options: {
         jshintrc: true
@@ -29,12 +33,12 @@ module.exports = function(grunt) {
           beautify: true
         },
         files: {
-          'dist/agave.js': ['src/agave.js']
+          'dist/agaveapi.js': ['src/agaveapi.js']
         }
       },
       min: {
         files: {
-          'dist/agave.min.js': ['src/agave.js'],
+          'dist/agaveapi.min.js': ['src/agaveapi.js'],
           'dist/vendor/vendor.js': [
             './node_modules/swagger-client/browser/swagger-client.js',
             './node_modules/es6-promise/dist/es6-promise.js'
@@ -85,6 +89,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-karma');
 
   grunt.registerTask('serve', function() {
@@ -98,5 +103,5 @@ module.exports = function(grunt) {
 
   grunt.registerTask('dev', ['jshint','karma:dev']);
 
-  grunt.registerTask('default', ['test','uglify']);
+  grunt.registerTask('default', ['test','clean','uglify']);
 };
