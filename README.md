@@ -12,7 +12,7 @@ Use the Agave API in client-side Javascript!
 
 ```
 <script src="../vendor/vendor.js"></script>
-<script src="../agave.js"></script>
+<script src="../agaveapi.js"></script>
 <script>
 var agave = new Agave({
   url: 'https://agave.iplantc.org/docs/v2/resources/',
