@@ -26,7 +26,7 @@
       help.textContent = agave.api.help();
       div.appendChild(help);
       setTimeout(function() {
-        div.children.item().remove();
+        div.children.item(0).remove();
       });
     }, function(err) {
       console.log(err);
